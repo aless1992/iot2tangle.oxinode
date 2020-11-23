@@ -30,18 +30,18 @@ cd ~/esp-idf
 ```
 After doing this last step do not close the shell, as we will compile and flash from here. If you close the shell you will have to do the previous step again.
 
-## 2) Download the Iot2Tangle ESP32 Repository and go to the 'http-sender' folder:
+## 2) Download the Oxinode Iot2Tangle ESP32 Repository and go to the 'mqtt-sender' folder:
 You can download the repository directly from Github, or from shell or Command Prompt with the following command:
 ```
 git clone https://github.com/Agro-iot/iot2tangle.oxinode.git
-cd iot2tangle.oxinode/http-sender
+cd iot2tangle.oxinode/mqtt-sender
 ```
 ## 3) Edit the file config.h
 The *config.h* file must be opened and modified, this file is in the directory *'ESP32/http-sender/main'* of the repository.
 
 This step is very important if you want to make a connection to the gateway. Your *WiFi Credentials*, the *address* and *port* that will have the *I2T Streams HTTP Gateway* or *Keepy* running, the *Device Id*, and others configurations. The *Id Name Device* you define here must be between the devices you set in on the *Gateway configuration file*. 
 ```
-const char* id_name = "ESP32-HTTP";
+const char* id_name = "ESP32-MQTT";
 
 /* Network Configuration */
 const char* ssid_WiFi = "mySSID";
