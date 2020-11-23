@@ -8,7 +8,7 @@ For full instructions, visit the [Oxinode Wiki](https://github.com/Agro-iot/iot2
 For this project we used [I2T Standard](https://github.com/Agro-iot/iot2tangle.oxinode/wiki/Architecture#esp32), [IOTA Streams Framework](https://www.iota.org/solutions/streams), and [ESP-IDF Standard](https://docs.espressif.com/projects/esp-idf/en/stable/get-started/).
 
 ## Overview and Background
-The Oxinode sends Pulse and Oxygen data to the [tangle](https://blog.iota.org/the-tangle-an-illustrated-introduction-4d5eae6fe8d4!), through the IoTStack. The developed system can be used to alert, through telegram, to patient's relatives about the blood Oxygen and Pulse levels. It can also be used as a quick mechanism to detect possible symptoms of COVID19, and a potential tool for physicians to take Oxygen and Pulse measurements that they can relay on.
+The Oxinode sends Pulse and Oxygen data to the [IOTA Tangle](https://blog.iota.org/the-tangle-an-illustrated-introduction-4d5eae6fe8d4!), through the IoTStack. The developed system can be used to alert, through telegram, to patient's relatives about the blood Oxygen and Pulse levels. It can also be used as a quick mechanism to detect possible symptoms of COVID19, and a potential tool for physicians to take Oxygen and Pulse measurements that they can relay on.
 
 ### Potential
 The same principle could be applied with wearable technologies (i.e. Smartwatch) adding other sensors such GPS and temperature to have the full picture of the end user's physical activity. Thanks to IOTA Streams Framework the user is always in control of its own data, and can profit from it by deciding who and when others are accessing the produced data.
