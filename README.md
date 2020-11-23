@@ -3,7 +3,7 @@
 ## Subject
 The Oxinode is a Secure Remote Control System for Oxygen and Pulse levels which has been developed by integrating an [ESP32-38PINOUT](https://github.com/Agro-iot/iot2tangle.oxinode/wiki/Architecture#esp32), a [MAX30102](https://github.com/Agro-iot/iot2tangle.oxinode/wiki/Architecture#max30102), a [3D Printed Case](https://www.thingiverse.com/thing:4658384), and the [Oxinode version]() of the [iot2tangle stack](https://github.com/iot2tangle).
 
-For full instructions, visit the [Oxinode Wiki](https://github.com/Agro-iot/iot2tangle.oxinode/wiki)
+For full instructions, visit the [Oxinode Wiki](https://github.com/Agro-iot/iot2tangle.oxinode/wiki).
 
 ## Standards
 For this project we used [I2T Standard](https://github.com/Agro-iot/iot2tangle.oxinode/wiki/Architecture#esp32), [IOTA Streams Framework](https://www.iota.org/solutions/streams), and [ESP-IDF Standard](https://docs.espressif.com/projects/esp-idf/en/stable/get-started/).
