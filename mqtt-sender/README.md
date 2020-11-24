@@ -111,8 +111,7 @@ cu -l /dev/ttyUSB0 -s 115200
 
 The following screenshot is a reading of the *Serial Port*, you should see something like this:
 
-![Raspberry with BME280 sending data to the Tangle](https://i.postimg.cc/cH6TWpXP/Screenshot-from-2020-10-16-11-33-05.png)
-
+![ESP32-mqtt](https://user-images.githubusercontent.com/51343893/100036100-c6f55300-2dbc-11eb-91d2-f9dc293c6527.png)
 
 # Setting up the Streams MQTT Gateway
 
