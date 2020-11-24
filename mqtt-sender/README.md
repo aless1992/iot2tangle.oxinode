@@ -155,9 +155,6 @@ You will only go through the compilation process once and any restart done later
 
 Once started, the ***Channel Id*** will be displayed, and the gateway will be open waiting for data to send to the Tangle.
 
-![Streams Gateway receiving data](https://i.postimg.cc/zfz0tbWz/Screenshot-from-2020-10-16-11-44-59.png)
-*The Channel Id that will allow subscribers to access the channel data.*
-
 ### Reading messages from the Tangle
 
 You can read the received messages directly from the **I2T Explorer**: https://explorer.iot2tangle.io/ using the Channel Id printed by the Gateway in shell.   
