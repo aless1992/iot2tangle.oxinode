@@ -1,6 +1,8 @@
+# Prerequisite
+Setup an MQTT Broker. In this case, we [Setup an MQTT Broker (EMQX)](https://github.com/Agro-iot/iot2tangle.oxinode/wiki/Setup-an-MQTT-Broker-(EMQX))
+
 # Download Firmware on ESP32
 This repository uses the ***Iot2Tangle C Core devices*** adapted for ***ESP32-FreeRTOS*** offered in the official *Espressif Toolchain ESP-IDF SDK*. Once the SDK is installed you will have all the tools to compile and download the program on your ESP32.
-
 
 ## 1) Install ESP-IDF SDK:
 ### Windows:
@@ -39,7 +41,6 @@ cd iot2tangle.oxinode/mqtt-sender
 ## 3) Edit the file config.h
 The *config.h* file must be opened and modified, this file is in the directory *'ESP32/http-sender/main'* of the repository.
 
-This step is very important if you want to make a connection to the gateway. Your *WiFi Credentials*, the *address* and *port* that will have the *I2T Streams HTTP Gateway* or *Keepy* running, the *Device Id*, and others configurations. The *Id Name Device* you define here must be between the devices you set in on the *Gateway configuration file*. 
 ```
 const char* id_name = "ESP32-MQTT";
 
@@ -48,8 +49,12 @@ const char* ssid_WiFi = "mySSID";
 const char* pass_WiFi = "myPASS";
 
 /* HTTP Endpoint Configuration */
-const char* address = "192.168.1.131/sensor_data";    /* Endpoint address (HTTP), must NOT include 'http://xxx' or 'tcp://xxx' */
-int port = 8080;
+const char* address = "<<Broker_IP_Address>>";    /* Endpoint address (HTTP), must NOT include 'http://xxx' or 'tcp://xxx' */
+int port = 1883;
+
+const char* topic = "iot2tangle/prueba";		/* MQTT topic */
+const char* user = "mqtti2t";			/* MQTT user */
+const char* password = "integrateeverything";	/* MQTT password */
 
 /* Enable Sensors */
 bool isEnable_TemperatureIntern = true;
