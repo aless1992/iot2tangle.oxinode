@@ -3,7 +3,7 @@ Setup an MQTT Broker. In this case, we [Setup an MQTT Broker (EMQX)](https://git
 
 # Connecting the sensors
 The following diagram explains how each sensor of our stack must be connected to the ESP32 pins. 
-![circuit_oxinode](https://user-images.githubusercontent.com/69220256/100067376-2dea2a80-2e04-11eb-88c8-3e94b0e8cdad.png)
+![circuit_oxinode](https://user-images.githubusercontent.com/69220256/100068492-9dace500-2e05-11eb-83e0-874c20924ee5.png)
 
 # Download Firmware on ESP32
 This repository uses the ***Iot2Tangle C Core devices*** adapted for ***ESP32-FreeRTOS*** offered in the official *Espressif Toolchain ESP-IDF SDK*. Once the SDK is installed you will have all the tools to compile and download the program on your ESP32.
