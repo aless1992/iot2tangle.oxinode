@@ -48,8 +48,8 @@ const char* id_name = "ESP32-MQTT";
 const char* ssid_WiFi = "mySSID";
 const char* pass_WiFi = "myPASS";
 
-/* HTTP Endpoint Configuration */
-const char* address = "<<Broker_IP_Address>>";    /* Endpoint address (HTTP), must NOT include 'http://xxx' or 'tcp://xxx' */
+/* MQTT Endpoint Configuration */
+const char* address = "<<Broker_IP_Address>>";    /* Endpoint address (MQTT), must NOT include 'http://xxx' or 'tcp://xxx' */
 int port = 1883;
 
 const char* topic = "iot2tangle/prueba";		/* MQTT topic */
@@ -79,7 +79,7 @@ Then run the following command that will start flashing the firmware. (You will 
 idf.py -p COM1 flash    # COM1 is an Windows port example, you must put your port. In Linux /dev/ttyUSB0 is an example, and in macOS: '/dev/cu' 
 ```
 
-Upon completion, the firmware is downloaded to your ESP32. If the *I2T Streams HTTP Gateway* is configured correctly (we will explain this next), ***you will be sending data to Tangle via Streams***.
+Upon completion, the firmware is downloaded to your ESP32. If the *I2T Streams MQTT Gateway* is configured correctly (we will explain this next), ***you will be sending data to Tangle via Streams***.
 
 # Debugging
 If configured correctly, *ESP32* should be sending data to the gateway automatically. However, you may want to verify that it is running on *ESP32*.
@@ -114,7 +114,7 @@ The following screenshot is a reading of the *Serial Port*, you should see somet
 ![Raspberry with BME280 sending data to the Tangle](https://i.postimg.cc/cH6TWpXP/Screenshot-from-2020-10-16-11-33-05.png)
 
 
-# Setting up the Streams HTTP Gateway
+# Setting up the Streams MQTT Gateway
 
 ## Preparation
 
@@ -133,13 +133,13 @@ sudo apt install build-essential pkg-config libssl-dev
 
 ## Installing the Streams Gateway
 Get the Streams Gateway repository
-https://github.com/iot2tangle/Streams-http-gateway
+https://github.com/iot2tangle/Streams-mqtt-gateway
 
 ```
-git clone https://github.com/iot2tangle/Streams-http-gateway
+git clone https://github.com/iot2tangle/Streams-mqtt-gateway
 ```
 
-Navigate to the root of **Streams-http-gateway** directory and edit the **config.json** file to define yours *device names*, *endpoint*, *port*, you can also change the IOTA Full Node used, among others.
+Navigate to the root of **Streams-mqtt-gateway** directory and edit the **config.json** file to define yours *topic*, *node*, *mwm*, *local_pow* if needed, you can also change the IOTA Full Node used, among others.
 
 ## Start the Streams Server
 
@@ -150,7 +150,7 @@ Run the Streams Gateway:
 ```
 cargo run --release  
 ```
-This will compile and start the *Streams HTTP Gateway*. Note that the compilation process may take from 3 to 25 minutes (Pi3 took us around 15/25 mins, Pi4 8 mins and VPS or desktop machines will generally compile under the 5 mins) depending on the device you are using as host.
+This will compile and start the *Streams mqtt Gateway*. Note that the compilation process may take from 3 to 25 minutes (Pi3 took us around 15/25 mins, Pi4 8 mins and VPS or desktop machines will generally compile under the 5 mins) depending on the device you are using as host.
 You will only go through the compilation process once and any restart done later will take a few seconds to have the Gateway working.
 
 Once started, the ***Channel Id*** will be displayed, and the gateway will be open waiting for data to send to the Tangle.
@@ -163,6 +163,5 @@ Once started, the ***Channel Id*** will be displayed, and the gateway will be op
 You can read the received messages directly from the **I2T Explorer**: https://explorer.iot2tangle.io/ using the Channel Id printed by the Gateway in shell.   
 
 ![I2T Explorer](https://i.postimg.cc/wTNf7dgp/Screenshot-from-2020-10-16-11-46-16.png)
-
 
 *For inquiries, improvements or errors detected, please start an issue in this repository.*
